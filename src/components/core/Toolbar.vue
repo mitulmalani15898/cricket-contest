@@ -32,17 +32,27 @@
         <v-menu offset-y>
           <template>
             <v-btn
-                    icon
-                    class="toolbar-items"
-                    slot="activator"
+              slot="activator"
+              icon
+              class="toolbar-items"
             >
-              <v-icon color="tertiary">mdi-account</v-icon>
-              <v-icon color="tertiary">mdi-menu-down</v-icon>
+              <v-icon color="tertiary">
+                mdi-account
+              </v-icon>
+              <v-icon color="tertiary">
+                mdi-menu-down
+              </v-icon>
             </v-btn>
           </template>
           <v-list>
             <v-list-tile>
-              <v-list-tile-title class="tile-title clickable" color="tertiary" @click="logout">Logout</v-list-tile-title>
+              <v-list-tile-title
+                class="tile-title clickable"
+                color="tertiary"
+                @click="logout"
+              >
+                Logout
+              </v-list-tile-title>
             </v-list-tile>
           </v-list>
         </v-menu>
@@ -58,6 +68,11 @@ import {
 } from 'vuex'
 
 export default {
+  filters: {
+    upperCase: function (v) {
+      return v.toUpperCase()
+    }
+  },
   data: () => ({
     notifications: [
       'Mike, John responded to your email',
@@ -76,7 +91,7 @@ export default {
       this.title = val.name
     }
   },
-  created() {
+  created () {
     this.title = this.$route.name
   },
   mounted () {
@@ -103,12 +118,7 @@ export default {
         this.responsiveInput = true
       }
     }
-  },
-    filters: {
-        upperCase: function(v) {
-            return v.toUpperCase();
-        }
-    }
+  }
 }
 </script>
 

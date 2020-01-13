@@ -2,7 +2,8 @@
   <v-container
     fill-height
     fluid
-    grid-list-xl>
+    grid-list-xl
+  >
     <v-layout
       justify-center
       wrap
@@ -25,7 +26,8 @@
                 >
                   <v-text-field
                     label="Company (disabled)"
-                    disabled/>
+                    disabled
+                  />
                 </v-flex>
                 <v-flex
                   xs12
@@ -42,7 +44,8 @@
                 >
                   <v-text-field
                     label="Email Address"
-                    class="purple-input"/>
+                    class="purple-input"
+                  />
                 </v-flex>
                 <v-flex
                   xs12
@@ -50,7 +53,8 @@
                 >
                   <v-text-field
                     label="First Name"
-                    class="purple-input"/>
+                    class="purple-input"
+                  />
                 </v-flex>
                 <v-flex
                   xs12
@@ -58,7 +62,8 @@
                 >
                   <v-text-field
                     label="Last Name"
-                    class="purple-input"/>
+                    class="purple-input"
+                  />
                 </v-flex>
                 <v-flex
                   xs12
@@ -66,29 +71,36 @@
                 >
                   <v-text-field
                     label="Adress"
-                    class="purple-input"/>
+                    class="purple-input"
+                  />
                 </v-flex>
                 <v-flex
                   xs12
-                  md4>
+                  md4
+                >
                   <v-text-field
                     label="City"
-                    class="purple-input"/>
+                    class="purple-input"
+                  />
                 </v-flex>
                 <v-flex
                   xs12
-                  md4>
+                  md4
+                >
                   <v-text-field
                     label="Country"
-                    class="purple-input"/>
+                    class="purple-input"
+                  />
                 </v-flex>
                 <v-flex
                   xs12
-                  md4>
+                  md4
+                >
                   <v-text-field
                     class="purple-input"
                     label="Postal Code"
-                    type="number"/>
+                    type="number"
+                  />
                 </v-flex>
                 <v-flex xs12>
                   <v-textarea
@@ -128,14 +140,22 @@
             >
           </v-avatar>
           <v-card-text class="text-xs-center">
-            <h6 class="category text-gray font-weight-thin mb-3">CEO / CO-FOUNDER</h6>
-            <h4 class="card-title font-weight-light">Alec Thompson</h4>
-            <p class="card-description font-weight-light">Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...</p>
+            <h6 class="category text-gray font-weight-thin mb-3">
+              CEO / CO-FOUNDER
+            </h6>
+            <h4 class="card-title font-weight-light">
+              Alec Thompson
+            </h4>
+            <p class="card-description font-weight-light">
+              Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+            </p>
             <v-btn
               color="success"
               round
               class="font-weight-light"
-            >Follow</v-btn>
+            >
+              Follow
+            </v-btn>
           </v-card-text>
         </material-card>
       </v-flex>

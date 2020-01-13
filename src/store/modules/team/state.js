@@ -1,5 +1,5 @@
 export default {
-    teamsLength: '0',
-    teams: [],
-    allTeams: [],
+  teamsLength: '0',
+  teams: [],
+  allTeams: []
 }

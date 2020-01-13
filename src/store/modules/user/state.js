@@ -1,3 +1,3 @@
 export default {
-    usersLength: '0',
+  usersLength: '0'
 }

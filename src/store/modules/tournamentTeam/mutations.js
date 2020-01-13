@@ -1,5 +1,5 @@
 export default {
-    setTournamentTeams(state, tournamentTeams) {
-        state.tournamentTeams = tournamentTeams;
-    }
+  setTournamentTeams (state, tournamentTeams) {
+    state.tournamentTeams = tournamentTeams
+  }
 }

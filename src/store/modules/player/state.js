@@ -1,4 +1,4 @@
 export default {
-    playersLength: '0',
-    players: [],
+  playersLength: '0',
+  players: []
 }

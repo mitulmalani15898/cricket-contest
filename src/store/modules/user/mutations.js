@@ -1,5 +1,5 @@
 export default {
-    setUsersLength(state, usersLength) {
-        state.usersLength = usersLength;
-    }
+  setUsersLength (state, usersLength) {
+    state.usersLength = usersLength
+  }
 }

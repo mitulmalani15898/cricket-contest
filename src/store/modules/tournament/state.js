@@ -1,4 +1,4 @@
 export default {
-    tournamentsLength: '0',
-    tournaments: [],
+  tournamentsLength: '0',
+  tournaments: []
 }

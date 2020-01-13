@@ -15,14 +15,14 @@ import Meta from 'vue-meta'
 // Routes
 import paths from './paths'
 
-function route(path, view, name, meta, beforeEnter) {
+function route (path, view, name, meta) {
   return {
     name: name || view,
     path,
     component: (resovle) => import(
       `@/views/${view}.vue`
     ).then(resovle),
-    meta,
+    meta
   }
 }
 
@@ -34,7 +34,7 @@ const router = new Router({
   routes: paths.map(path => route(path.path, path.view, path.name, path.meta)).concat([
     { path: '*', redirect: '/signin' }
   ]),
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
     }
@@ -60,11 +60,9 @@ if (process.env.GOOGLE_ANALYTICS) {
   })
 }
 
-const openRouets = ['Signup', 'Signin'];
-
 router.beforeEach((to, from, next) => {
-  const token = localStorage.getItem('token');
-  const role = localStorage.getItem('role');
+  const token = localStorage.getItem('token')
+  const role = localStorage.getItem('role')
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (!token) {
       next('/signin')

@@ -2,18 +2,22 @@
   <v-container
     fluid
     grid-list-xl
-    fill-height>
+    fill-height
+  >
     <v-layout
       justify-center
       align-center
     >
       <v-flex xs12>
         <material-card
-          color="green">
+          color="green"
+        >
           <div
             slot="header"
           >
-            <div class="title font-weight-light mb-2">Notifications</div>
+            <div class="title font-weight-light mb-2">
+              Notifications
+            </div>
             <div class="category">
               Handcrafted by us with
               <v-icon
@@ -27,11 +31,15 @@
           <v-card-text>
             <v-layout
               row
-              wrap>
+              wrap
+            >
               <v-flex
                 md6
-                sm12>
-                <h2 class="title font-weight-light mb-3">Notifications Style</h2>
+                sm12
+              >
+                <h2 class="title font-weight-light mb-3">
+                  Notifications Style
+                </h2>
 
                 <material-notification
                   class="mb-3"
@@ -52,7 +60,6 @@
                   dismissible
                   icon="mdi-bell-plus"
                 >
-
                   This is a notification with close button and icon.
                 </material-notification>
                 <material-notification
@@ -61,15 +68,17 @@
                   dismissible
                   icon="mdi-bell-plus"
                 >
-
                   This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.
                 </material-notification>
               </v-flex>
 
               <v-flex
                 md6
-                sm12>
-                <h2 class="title font-weight-light">Notifcation States</h2>
+                sm12
+              >
+                <h2 class="title font-weight-light">
+                  Notifcation States
+                </h2>
 
                 <material-notification
                   class="mb-3"
@@ -113,7 +122,9 @@
               </v-flex>
             </v-layout>
             <div class="text-xs-center">
-              <h2 class="title font-weight-light mb-2">Notification Places</h2>
+              <h2 class="title font-weight-light mb-2">
+                Notification Places
+              </h2>
               <span class=" subheading font-weight-light grey--text">Click to view notifications</span>
             </div>
 
@@ -121,10 +132,12 @@
               <v-layout
                 justify-center
                 row
-                wrap>
+                wrap
+              >
                 <v-flex
                   xs12
-                  sm4>
+                  sm4
+                >
                   <v-btn
                     block
                     color="success"
@@ -135,7 +148,8 @@
                 </v-flex>
                 <v-flex
                   xs12
-                  sm4>
+                  sm4
+                >
                   <v-btn
                     block
                     color="success"
@@ -148,10 +162,12 @@
               <v-layout
                 justify-center
                 row
-                wrap>
+                wrap
+              >
                 <v-flex
                   xs12
-                  sm4>
+                  sm4
+                >
                   <v-btn
                     block
                     color="success"
@@ -162,7 +178,8 @@
                 </v-flex>
                 <v-flex
                   xs12
-                  sm4>
+                  sm4
+                >
                   <v-btn
                     block
                     color="success"
@@ -175,10 +192,12 @@
               <v-layout
                 justify-center
                 row
-                wrap>
+                wrap
+              >
                 <v-flex
                   xs12
-                  sm4>
+                  sm4
+                >
                   <v-btn
                     block
                     color="success"
@@ -189,7 +208,8 @@
                 </v-flex>
                 <v-flex
                   xs12
-                  sm4>
+                  sm4
+                >
                   <v-btn
                     block
                     color="success"
@@ -202,12 +222,12 @@
             </v-container>
 
             <v-snackbar
+              v-model="snackbar"
               :color="color"
               :bottom="bottom"
               :top="top"
               :left="left"
               :right="right"
-              v-model="snackbar"
               dark
             >
               <v-icon

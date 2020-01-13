@@ -1,10 +1,23 @@
 <template>
-  <v-container fill-height fluid grid-list-xl>
+  <v-container
+    fill-height
+    fluid
+    grid-list-xl
+  >
     <v-layout wrap>
-      <v-flex md12 sm12 lg12>
-        <v-parallax src="./img/cricket-dashboard.png"></v-parallax>
+      <v-flex
+        md12
+        sm12
+        lg12
+      >
+        <v-parallax src="./img/cricket-dashboard.png" />
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex
+        sm6
+        xs12
+        md6
+        lg3
+      >
         <material-stats-card
           color="green"
           icon="mdi-trophy-variant"
@@ -14,7 +27,12 @@
           sub-text="Total Tournaments"
         />
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex
+        sm6
+        xs12
+        md6
+        lg3
+      >
         <material-stats-card
           color="orange"
           icon="mdi-account-group"
@@ -24,7 +42,12 @@
           sub-text="Total Teams"
         />
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex
+        sm6
+        xs12
+        md6
+        lg3
+      >
         <material-stats-card
           color="red"
           icon="mdi-run"
@@ -34,7 +57,12 @@
           sub-text="Total Players"
         />
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex
+        sm6
+        xs1
+        md6
+        lg3
+      >
         <material-stats-card
           color="info"
           icon="mdi-account"
@@ -49,31 +77,30 @@
 </template>
 
 <script>
-import apiService from "../service/api.service";
 export default {
   computed: {
-    tournaments() {
+    tournaments () {
       return this.$store.state.tournament.tournamentsLength
         ? this.$store.state.tournament.tournamentsLength.toString()
-        : "0";
+        : '0'
     },
-    teams() {
+    teams () {
       return this.$store.state.team.teamsLength
         ? this.$store.state.team.teamsLength.toString()
-        : "0";
+        : '0'
     },
-    players() {
+    players () {
       return this.$store.state.player.playersLength
         ? this.$store.state.player.playersLength.toString()
-        : "0";
+        : '0'
     },
-    users() {
+    users () {
       return this.$store.state.user.usersLength
         ? this.$store.state.user.usersLength.toString()
-        : "0";
+        : '0'
     }
   }
-};
+}
 </script>
 
 <style scoped>
