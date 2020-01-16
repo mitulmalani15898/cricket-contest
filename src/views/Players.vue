@@ -47,9 +47,9 @@
                 >
                   <v-text-field
                     v-model="fname"
+                    :rules="nameRules"
                     label="First Name"
                     required
-                    :rules="nameRules"
                   />
                 </v-flex>
                 <v-flex
@@ -59,9 +59,9 @@
                 >
                   <v-text-field
                     v-model="lname"
+                    :rules="nameRules"
                     label="Last Name"
                     required
-                    :rules="nameRules"
                   />
                 </v-flex>
                 <v-flex
@@ -82,9 +82,9 @@
                     <template slot="activator">
                       <v-text-field
                         v-model="date"
+                        :rules="dateRules"
                         label="Date of Birth"
                         prepend-icon="mdi-calendar"
-                        :rules="dateRules"
                         readonly
                       />
                     </template>
@@ -120,10 +120,10 @@
                 <v-flex xs12>
                   <v-textarea
                     v-model="description"
+                    :rules="descriptionRules"
                     label="Description"
                     auto-grow
                     rows="2"
-                    :rules="descriptionRules"
                   />
                 </v-flex>
                 <v-flex xs12>
@@ -183,8 +183,8 @@
             <v-spacer />
             <v-btn
               v-if="modalType === 'add'"
-              color="green darken-1"
               :disabled="!valid || fileError !== ''"
+              color="green darken-1"
               type="submit"
               flat
             >
@@ -242,13 +242,13 @@
       :pagination.sync="pagination"
       :total-items="totalPlayers"
       :loading="isLoading"
-      class="elevation-1 teamTable"
       :rows-per-page-items="[
         5,
         10,
         25,
         { text: 'All', value: totalPlayers }
       ]"
+      class="elevation-1 teamTable"
     >
       <template
         slot="items"

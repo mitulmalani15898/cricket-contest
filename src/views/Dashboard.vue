@@ -19,10 +19,10 @@
         lg3
       >
         <material-stats-card
+          :value="tournaments"
           color="green"
           icon="mdi-trophy-variant"
           title="Tournaments"
-          :value="tournaments"
           sub-icon="mdi-trophy-variant"
           sub-text="Total Tournaments"
         />
@@ -34,10 +34,10 @@
         lg3
       >
         <material-stats-card
+          :value="teams"
           color="orange"
           icon="mdi-account-group"
           title="Teams"
-          :value="teams"
           sub-icon="mdi-account-group"
           sub-text="Total Teams"
         />
@@ -49,10 +49,10 @@
         lg3
       >
         <material-stats-card
+          :value="players"
           color="red"
           icon="mdi-run"
           title="Players"
-          :value="players"
           sub-icon="mdi-run"
           sub-text="Total Players"
         />
@@ -64,10 +64,10 @@
         lg3
       >
         <material-stats-card
+          :value="users"
           color="info"
           icon="mdi-account"
           title="Users"
-          :value="users"
           sub-icon="mdi-account"
           sub-text="Total Users"
         />

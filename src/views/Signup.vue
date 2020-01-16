@@ -81,8 +81,8 @@
                 >
                   <v-text-field
                     v-model="password"
-                    type="password"
                     :rules="passwordRules"
+                    type="password"
                     label="Password"
                     prepend-inner-icon="mdi-lock"
                     class="success-input"
@@ -94,8 +94,8 @@
                 >
                   <v-text-field
                     v-model="confirmPassword"
-                    type="password"
                     :rules="confirmPasswordRules"
+                    type="password"
                     label="Confirm Password"
                     prepend-inner-icon="mdi-lock"
                     class="success-input"
@@ -129,9 +129,9 @@
                   text-xs-center
                 >
                   <v-btn
+                    :disabled="!valid"
                     class="mx-0 font-weight-light"
                     color="success"
-                    :disabled="!valid"
                     type="submit"
                   >
                     Sign Up

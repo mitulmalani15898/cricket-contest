@@ -72,10 +72,10 @@
                   text-xs-center
                 >
                   <v-btn
+                    :disabled="!valid"
                     type="submit"
                     class="mx-0 font-weight-light"
                     color="success"
-                    :disabled="!valid"
                   >
                     Sign In
                   </v-btn>

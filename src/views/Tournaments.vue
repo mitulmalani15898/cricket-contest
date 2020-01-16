@@ -49,18 +49,18 @@
                 >
                   <v-text-field
                     v-model="name"
+                    :rules="nameRules"
                     label="Tournament Name"
                     required
-                    :rules="nameRules"
                   />
                 </v-flex>
                 <v-flex xs12>
                   <v-textarea
                     v-model="description"
+                    :rules="descriptionRules"
                     label="Tournament Description"
                     auto-grow
                     rows="2"
-                    :rules="descriptionRules"
                   />
                 </v-flex>
                 <v-flex xs12>
@@ -118,8 +118,8 @@
             <v-spacer />
             <v-btn
               v-if="modalType === 'add'"
-              color="green darken-1"
               :disabled="!valid || fileError !== ''"
+              color="green darken-1"
               type="submit"
               flat
             >
@@ -213,10 +213,10 @@
           <div v-if="teams && teams.length">
             <v-checkbox
               v-model="selectAll"
-              class="select-all"
-              label="Select all"
               :checked="selectAll"
               :indeterminate.sync="example"
+              class="select-all"
+              label="Select all"
               @change="select"
             />
             <v-card style="padding-bottom: 20px;">
@@ -226,11 +226,11 @@
               >
                 <v-list-tile-content>
                   <v-checkbox
+                    :label="team.teamName"
                     :key="team.id"
                     v-model="selected"
-                    color="success"
-                    :label="team.teamName"
                     :value="team.id"
+                    color="success"
                   />
                 </v-list-tile-content>
               </v-list-tile>
@@ -310,20 +310,20 @@
     </v-dialog>
 
     <v-data-table
-      must-sort
       :headers="headers"
       :items="tournaments"
       :total-items="totalTournaments"
       :pagination.sync="pagination"
       :loading="isLoading"
-      class="elevation-1 tournamentTable"
+      :disable-page-reset="true"
       :rows-per-page-items="[
         5,
         10,
         25,
         { text: 'All', value: totalTournaments }
       ]"
-      :disable-page-reset="true"
+      class="elevation-1 tournamentTable"
+      must-sort
     >
       <template
         slot="items"

@@ -47,9 +47,9 @@
                 >
                   <v-text-field
                     v-model="name"
+                    :rules="nameRules"
                     label="Team Name"
                     required
-                    :rules="nameRules"
                   />
                 </v-flex>
                 <v-flex xs12>
@@ -107,8 +107,8 @@
             <v-spacer />
             <v-btn
               v-if="modalType === 'add'"
-              color="green darken-1"
               :disabled="!valid || fileError !== ''"
+              color="green darken-1"
               type="submit"
               flat
             >
@@ -166,13 +166,13 @@
       :pagination.sync="pagination"
       :total-items="totalTeams"
       :loading="isLoading"
-      class="elevation-1 teamTable"
       :rows-per-page-items="[
         5,
         10,
         25,
         { text: 'All', value: totalTeams }
       ]"
+      class="elevation-1 teamTable"
     >
       <template
         slot="items"
